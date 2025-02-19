@@ -15,6 +15,7 @@
 - Shelvers reorganize books that are checked in.
 - When a person or staff wants a book, a lot of the time, books are shipped to another library where they're requested.
 - You need to make the library as efficient as possible whilst still accounting for human error.
+- Many other libraries use LCC, CC, and UDC sorting systems.
 
 ## Extra Notes
 
