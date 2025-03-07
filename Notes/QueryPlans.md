@@ -19,7 +19,7 @@
 
 3. A short explanation of why it used the operation it did
 
-> 
+> Sequential scans are most efficient when most rows need to be scanned, since here it retrieves every date_of_birth entry from the entire table, sequential scan is used.
 
 ## Index Scan
 
@@ -41,7 +41,7 @@
 
 3. A short explanation of why it used the operation it did
 
-> 
+> Index scans use the index but still need to access the table to get additional data. Since here the SELECT statement is searching for employee_id = 2, it needs to access the table to find the specific employee_id row. Thus, an index scan is used.
 
 ## Index Only Scan
 
