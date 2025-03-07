@@ -34,4 +34,22 @@
 
 ## Slow Indexes, Part II
 
-- 
+- Changing an index affects all queries on an indexed table.
+
+- Databases select indexes based on optimization criteria.
+
+- If multiple access paths exist, the query optimizer is used to select the best one.
+
+- Indexed queries can be slower than full table scans if certain criterion are present.
+
+- For example, wide index ranges are used, many rows must be fetched individually, or poor filtering.
+
+- Query optimizers rely on database statistics for execution plans.
+
+- If no statistics are present, the optimizer uses default values.
+
+- Default values can poorly guess the number of rows.
+
+- INDEX RANGE SCAN can be slow if too many rows are fetched.
+
+- Always check execution plans before changing indexes.
