@@ -6,14 +6,13 @@
 
 ![Celtics25ER](https://github.com/jackaaburk/ITE140/blob/main/Celtics25SQLProject/Celtics25ER.png)
 
-> SQL File
-
-[Celtics25SQL](https://github.com/jackaaburk/ITE140/blob/main/Celtics25SQLProject/Celtics25SQL.sql)
-
 > PGAdmin ER
 
 ![Celtics25PGER](./Images/Celtics25PGER.png)
 
+> SQL File
+
+[Celtics25SQL](https://github.com/jackaaburk/ITE140/blob/main/Celtics25SQLProject/Celtics25SQL.sql)
 
 ### Reflection
 
