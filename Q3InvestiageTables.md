@@ -12,7 +12,7 @@
 
 > PGAdmin ER
 
-[Celtics25PGER](./Images/Celtics25PGER.png)
+![Celtics25PGER](./Images/Celtics25PGER.png)
 
 
 ### Reflection
