@@ -1,4 +1,4 @@
-# Investiage Tables
+# Investigate Tables
 
 ### ER Diagram Comparison
 
