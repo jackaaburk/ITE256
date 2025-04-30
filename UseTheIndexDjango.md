@@ -19,17 +19,17 @@
 
 > Without __iexact
 
-- When one doesn't use __iexact, Django is able to use the index since it isn't case insensitve.
+- When one doesn't use __iexact, Django is able to use the index since it isn't doing a case-insensitive search.
 
 > With __iexact
 
 - When one does use __iexact, Django is inable to use an index, possibly making it much slower.
 
->
-- Intuitively, index and index only scans are very heavily lengthened when using __iexact, since it instead turns into a sequential scan/bitmap, requiring the scan to go through more of the actual table/data instead of the index.
 
->
-- Note: There are no entries with the first name "john", there are only some with "John". It isn't like the iexact query is retrieving more rows or anything, it is just inefficient.
+> - Intuitively, index and index only scans are very heavily lengthened when using __iexact, since it instead turns into a sequential scan/bitmap, requiring the scan to go through more of the actual table/data instead of the index.
+
+
+> - Note: There are no entries with the first name "john", there are only some with "John". It isn't like the iexact query is retrieving more rows or anything, it is just inefficient.
 
 ## Results of the runtime investigation, formatted into a table.
 
