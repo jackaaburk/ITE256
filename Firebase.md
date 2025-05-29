@@ -64,3 +64,62 @@ INDEX:
 
 - Social media apps, especially with a NoSQL database that can handle a lot of unstructured data.
 
+## Firebase Tutorial: Getting Started With a FireBase using Python
+
+- To start, all you need to do is make a Firebase app with a real-time database.
+
+1. Go to FireBase's website @ firebase.google.com
+
+2. Click "Get started in console"
+
+3. Create an app and follow through the creation prompts
+
+4. After your app opens, under "Build" on the left hand dropdown, select real-time database, and create a real-time database on this page (I chose test mode since I am doing a tutorial).
+
+## Firebase Tutorial: Connecting your terminal to the real-time database
+
+- Now, we must connect your local machine to the real-time database in Google's web hosting
+
+1. Download firebase_admin for Python, using something like pip install firebase_admin
+
+2. Make a root directory for your project (name it to your choosing) with a .py file in it (with a name of your choosing).
+
+3. Copy paste this template into the .py file, then obtain and replace the credentials to connect to your database in the database settings button on the web application. Additionally, the database URL can be found directly above the database console.
+
+> import firebase_admin
+> 
+> cred_obj = firebase_admin.credentials.Certificate('....path to file')
+> default_app = firebase_admin.initialize_app(cred_object, {
+>> 'databaseURL':databaseURL
+>> })
+> from firebase_admin import db
+> 
+> ref = db.reference("/")
+> 
+> import json
+> with open("objects.json", "r") as f:
+>> file_contents = json.load(f)
+> ref.set(file_contents)
+
+
+## Adding objects to your non-relational database
+
+- If you inspected the template closely, you could find "objects.json" in a open() function, coupled with a load JSON load function and a set function.
+
+- Through this, FireBase essentially opens JSON files with database objects and sends them to your real-time database that you are connected to. 
+
+1. Knowing this, we should make a file named objects.json, or any named JSON file as long as you update the template to it. 
+
+2. Now, put JSON objects in it. The file should look something like this:
+
+> {
+>> "Object":
+>> {
+>>> "Attribute1": "Beep",
+>>> "Attribute2": "Boop"
+>> }
+> }
+
+3. Now, after running your main .py file, the objects should be sent and viewable in the real-time database. 
+
+> Other FireBase functions can be used to remove and modify objects.
