@@ -90,17 +90,14 @@ INDEX:
 import firebase_admin
 
 cred_obj = firebase_admin.credentials.Certificate('....path to file')
-
 default_app = firebase_admin.initialize_app(cred_object, {
     'databaseURL':databaseURL
-
     })
-from firebase_admin import db
 
+from firebase_admin import db
 ref = db.reference("/")
 
 import json
-
 with open("objects.json", "r") as f:
 
     file_contents = json.load(f)
@@ -123,7 +120,6 @@ ref.set(file_contents)
 
     {
         "Attribute1": "Beep",
-
         "Attribute2": "Boop"
     }
 }
