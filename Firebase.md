@@ -127,4 +127,4 @@ ref.set(file_contents)
 
 3. Now, after running your main .py file, the objects should be sent and viewable in the real-time database. 
 
-> Other FireBase functions can be used to remove and modify objects.
+> Other FireBase functions can be used to remove and modify objects with remove() or update().
