@@ -87,18 +87,30 @@ INDEX:
 3. Copy paste this template into the .py file, then obtain and replace the credentials to connect to your database in the database settings button on the web application. Additionally, the database URL can be found directly above the database console.
 
 > import firebase_admin
+
 > 
+
 > cred_obj = firebase_admin.credentials.Certificate('....path to file')
+
 > default_app = firebase_admin.initialize_app(cred_object, {
 >> 'databaseURL':databaseURL
+
 >> })
+
 > from firebase_admin import db
+
 > 
+
 > ref = db.reference("/")
+
 > 
+
 > import json
+
 > with open("objects.json", "r") as f:
+
 >> file_contents = json.load(f)
+
 > ref.set(file_contents)
 
 
@@ -114,8 +126,10 @@ INDEX:
 
 > {
 >> "Object":
+
 >> {
 >>> "Attribute1": "Beep",
+
 >>> "Attribute2": "Boop"
 >> }
 > }
