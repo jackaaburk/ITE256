@@ -85,34 +85,27 @@ INDEX:
 2. Make a root directory for your project (name it to your choosing) with a .py file in it (with a name of your choosing).
 
 3. Copy paste this template into the .py file, then obtain and replace the credentials to connect to your database in the database settings button on the web application. Additionally, the database URL can be found directly above the database console.
+ 
+```
+import firebase_admin
 
-> import firebase_admin
+cred_obj = firebase_admin.credentials.Certificate('....path to file')
 
-> 
+default_app = firebase_admin.initialize_app(cred_object, {
+    'databaseURL':databaseURL
 
-> cred_obj = firebase_admin.credentials.Certificate('....path to file')
+    })
+from firebase_admin import db
 
-> default_app = firebase_admin.initialize_app(cred_object, {
->> 'databaseURL':databaseURL
+ref = db.reference("/")
 
->> })
+import json
 
-> from firebase_admin import db
+with open("objects.json", "r") as f:
 
-> 
-
-> ref = db.reference("/")
-
-> 
-
-> import json
-
-> with open("objects.json", "r") as f:
-
->> file_contents = json.load(f)
-
-> ref.set(file_contents)
-
+    file_contents = json.load(f)
+ref.set(file_contents)
+```
 
 ## Adding objects to your non-relational database
 
@@ -124,15 +117,17 @@ INDEX:
 
 2. Now, put JSON objects in it. The file should look something like this:
 
-> {
->> "Object":
+```
+{
+    "Object":
 
->> {
->>> "Attribute1": "Beep",
+    {
+        "Attribute1": "Beep",
 
->>> "Attribute2": "Boop"
->> }
-> }
+        "Attribute2": "Boop"
+    }
+}
+```
 
 3. Now, after running your main .py file, the objects should be sent and viewable in the real-time database. 
 
